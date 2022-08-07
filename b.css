@@ -1,0 +1,497 @@
+body{
+    margin: 0px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    /*todos os elementos dentro dessa div vão ficar alinhados*/
+    justify-content: center;
+    /*centralizar o header*/
+    
+    height: 120px;
+}
+.container{
+    /*vira o paadrãao da pagina*/
+    /*agora botar display:flex; no container permite os itens do CONTAINER serem flexiveis lado a lado*/
+    display: flex;
+    /*para eles ficaarem lado a lado com proporções*/
+    justify-content: space-between;
+    /*precisa manter sempre*/
+    width: 990px;
+}
+.logo{
+    /*para poder mover o conteudo dentro da div logo*/
+    display: flex;
+    align-items: center;    
+}
+.menu{
+     /*para poder mover o conteudo dentro da div logo*/
+     display: flex;
+     /*alinhou com o centro do header, se fosse direto no nav ul não funiona*/
+     align-items: center;
+     
+}
+nav ul, nav li{
+    /*tirar os pontinhos da lista*/
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+/*usar dentro de ul os elementos lado a lado*/
+/*display flex so funciona com div diretamente ligadas*/
+nav ul{
+    display: flex;
+    
+}
+nav a{
+    /*para conseguir alterar tamanhos*/
+    display: block;
+    /*ja afasta um pouco os menus*/
+    padding: 15px;
+    /*para tirar as barrinhas*/
+    text-decoration: none;
+    /*caixa alta*/
+    text-transform: uppercase;
+    color: #727272 ;
+}
+nav .pages a{
+    /*ja mantem um ligado*/
+    background-color: #39aae1;
+    color: white;
+}
+nav a:hover{
+    /*efeito com o mouse passando por cima*/
+    background-color: #39aae1;
+    color: white;
+}
+#banner{
+    display: flex;
+    justify-content: center;
+    /*adicionando a imagem pelo css*/
+    background-image:url(img1.jpg);
+    /*alinha no centro*/
+    background-position: center;
+    /*cobre a largira*/
+    background-size: cover;
+    height:670px ;
+}
+.column{/*colocaar em colunas*/
+    flex-direction: column;
+}
+.banner_headline{
+    flex: 1;/*proporção*/
+    display: flex;/*paraa poder mexer*/
+    flex-direction: column;/*ficaar em coluna*/
+    justify-content: center;/*como esta em coluna usar justify para centralizar*/
+    padding: 20px;
+}
+.banner_headline h1{
+    color: white;
+    text-shadow: 1px 1px 0px #727272;
+    font-size: 70px;
+    /*tirar maargin e padding deixar um perto do outro*/
+    margin: 0;
+    padding:0;
+    width: 400px;
+    margin-top:30px ;
+    margin-bottom: 40px;
+}
+
+.banner_headline h2{
+    color: white;
+    text-shadow: 1px 1px 0px #727272;
+    font-size: 20px;
+    /*tirar maargin e padding deixar um perto do outro*/
+    margin: 0;
+    padding:0;
+    width: 300px;
+    margin-top:20px 
+}
+.banner_options{
+    height: 210px;
+    /*deixar uma do lado da outra*/
+    display: flex;
+    justify-content: center;
+}
+.banner1, .banner2, .banner3{
+    color:rgb(252, 250, 251);
+    flex:1;
+    padding: 20px;
+}
+.banner1 {
+    background-color: #39aae1;
+}
+.banner2{
+    background-color: #0079c7;
+}
+.banner3{
+    background-color: #2b4c99;
+}
+.banner_title{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.banner_text{
+    padding-top: 10px;
+    padding-bottom: 30px; 
+    font-size: 13px;
+}
+#banner a{
+    text-decoration: none;
+    padding: 5px;
+    color:azure;
+    border: 1px solid white;
+    font-size: 12px;
+}
+.banner3 .banner_hours {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 7px;
+    margin: 20px 0px 20px 0px;
+    font-size: 13px;
+    border-bottom: 1px solid #ffffff66;
+}
+
+
+/*article*/
+#geral{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+
+}
+#geral section{
+    flex: 2;
+    flex-wrap: wrap;
+}
+#geral aside{
+    flex: 1;
+}
+
+.widget_title_text{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color:black;
+    font-size: 21px;
+    font-weight: bold;
+}
+.widget_bar{
+    width: 50px;
+    height: 3px;
+    background-color: #36a9e1;
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*article*/
+article{
+    /*proporcianl*/
+    flex:1;
+    /*definir tamanho minimo*/
+    min-width: 300px;
+    min-height: auto;
+    /*desencostar tanto do aside como das noticias*/
+    margin-right: 20px;
+}
+article .news_data{
+    /*deixar uma do lado da ourra*/
+    display: flex;  
+    flex-wrap: wrap;  
+}
+section article .news_posted_at{
+    background-color: #2b4c99;
+    border: 1px solid #2b4c99;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 12px;
+    margin-right: 2px;
+}
+section article .news_comments{
+    background-color: #39aae1;
+    border: 1px solid #39aae1;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+section article .news_img img{
+    width: 100%;
+    height: auto;
+}
+section article .news_img{
+    margin-top: 30px;
+}
+section article .news_title{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 23px;
+    color: #000000;
+}
+section article .news_resume{
+    font-size: 14px;
+    color: #5c5c5c;
+    line-height: 20px;
+    margin-bottom:30px
+}
+section article a{
+    text-decoration: none; 
+    flex-wrap: wrap;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap; 
+    min-width: 300px;
+    min-height: auto;
+}
+/*article*/
+
+
+
+
+/*Departaments*/
+.dep_widget{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dep{
+    width: 155px;
+    height: 155px;
+    min-width: 145px;
+    min-height: 145px;
+    background-color: #36a9e1;
+    margin: 5px;
+}
+/*Departaments*/
+
+
+
+/*appointment*/
+.app.widget{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+.app_widget_resume{
+    font-size: 15px;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.app_widget_contact{
+    border-bottom: 1px solid #36a9e1;
+    padding-left: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.app_widget_icon img{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app_widget_name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 13px;
+}
+/*appointment*/
+
+
+
+
+/*rodapé*/
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #1E1E1E;
+
+}
+/*um do lado do outro*/
+.footer_menu{
+    display: flex;
+    color: #ffffff;
+    /*PARA BOTAR TODOS NO PADRÃO CONATINER*/
+    flex:1;
+}
+
+
+footer a{
+    text-decoration: none;
+    color: white;
+    
+}
+/*coloca o menu e area em coluna*/
+footer .flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_menu_1{
+    flex: 1;
+    background-color: #36a9e1 ;
+    padding: 20px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.footer_menu_2{
+    flex: 1;
+    background-color: #0079c7 ;
+    padding: 20px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.footer_menu_3{
+    flex: 1;
+    background-color: #2b4c99 ;
+    padding: 20px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.footer_area{
+    display: flex;
+}
+.footer_area_1{
+    flex:1;
+    color: #5c5c5c;
+    font-size: 13px;
+    padding:10px;
+}
+.footer_area_2{
+    flex:1;
+    color: #5c5c5c;
+    font-size: 13px;
+    padding:10px;
+}
+.footer_area_3{
+    flex:1;
+    color: #5c5c5c;
+    font-size: 13px;
+    padding:10px;
+}
+footer .widget_title_text{
+    color: white;
+}
+.footer_area_resume{
+    margin-bottom: 10px;
+}
+.contact_address{
+    display: flex;
+    justify-content: space-between;
+}
+.add_widget_icon img{
+    width: 20px;
+    height: 20px;
+    padding-right: 8px;
+}
+.logo_add{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+.last_post{
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.last_post_data{
+    color: #39aae1;
+    margin-bottom: 10px;
+}
+.last_Twitters{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.footer_bar{
+    width: auto;
+    height: 1px;
+    background-color: #2c2c2c;
+}
+.footer_copy{
+    color: #5c5c5c;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+
+
+
+
+
+/*responsividade*/
+.menuMobile{
+    display: none;
+    width: 40px; 
+    height: 40px; 
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+.mm_line{
+    height: 3px;
+    background-color: #39aae1;
+}
+@media (max-width:600px){
+    .banner_headline h1{
+        font-size: 55px;
+    }
+    .banner_headline h2{
+        font-size: 17px;
+    }
+    .banner_options {
+        height: auto;
+        flex-direction: column;
+    }
+    #geral{
+        margin-top: 150px;
+    }
+    #banner .container , #geral .container{
+        flex-direction: column;
+    }
+    #geral section , #geral aside{
+        padding:20px;
+    }
+    .footer_menu{
+        flex-direction: column;
+    }
+    .footer_area{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footer_copy{
+        padding:20px
+    }
+    nav ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+    }
+     header{
+        height: auto;
+     }   
+     .logo{
+        padding-left: 20px;
+     }
+     .menuMobile{
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;  
+    }
+}
